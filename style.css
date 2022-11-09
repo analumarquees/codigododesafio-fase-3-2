@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-heading: 'Staatliches', cursive;
+  --ff-texting: 'Palanquin', sans-serif;
+
+  --bg-primary: #FFFFFF;
+  --bg-heading: #8E9AAF;
+  --bg-h1: #CBC0D3;
+  --bg-card: #FEEAFA;
+  --fc-primary: #FFFFFF;
+  --fc-secondary: #23053A;
+  --fc-card: #4A4E69;
+
+}
+
+body {
+  font-family: var(--ff-texting);
+
+  background-color: var(--bg-primary);
+  
+}
+
+.page {
+  max-width: 33rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  background: var(--bg-heading);
+  width: 38.4rem;
+  height: 25.1rem;
+  
+}
+
+.card1 {
+  width: 17.7rem;
+  margin: 0 auto;
+  object-fit: contain;
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+}
+
+header h1 {
+  font-family: var(--ff-heading);
+  background: var(--bg-h1);
+  color: var(--bg-primary);
+  font-weight: 400;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  padding-left: 9.5rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  
+
+  
+  display: flex;
+  align-items: center;
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  
+}
+
+main {
+  background: #FFFFFF;
+}
+
+main p {
+  font-family: var(--ff-texting);
+  color: var(--fc-secondary);
+  width: 38.4rem;
+  font-weight:400;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5rem;
+  padding: 1.4rem 4.3rem 4.0rem 3.6rem;
+
+}
+
+.card {
+  position: relative;
+  font-family: var(--ff-heading);
+}
+
+.card img {
+  object-fit: cover;
+  padding-bottom: 2.0rem;
+  padding-left: 3.2rem;
+  border-radius: 2.0rem;
+  transition: all 200ms;
+  animation-name: downtop;
+  animation-duration: 1050ms;
+}
+
+.card img:hover {
+  opacity: 0.7;
+}
+
+.card h2 {
+  background: var(--bg-card);
+  color: var(--fc-card);
+  position: absolute;
+  width: fit-content;
+  border-radius: 2.0rem;
+  font-weight: 400;
+  font-size: 2.0rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  padding-right: 2.3rem;
+  padding-left: 2.4rem;
+  top: 1.6rem;
+  left: 19.2rem;
+  right: 1.6rem;
+  animation-name: topdown;
+  animation-duration: 1200ms;
+}
+
+.card h2:hover {
+  transform: scale(1.1);
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
