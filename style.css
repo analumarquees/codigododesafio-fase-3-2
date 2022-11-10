@@ -27,7 +27,8 @@ body {
 }
 
 .page {
-  max-width: 33rem;
+  width: 100%;
+  min-width: 32rem;
   margin: 0 auto;
   align-items: center;
 }
@@ -40,8 +41,8 @@ img {
 
 header {
   background: var(--bg-heading);
-  width: 38.4rem;
-  height: 25.1rem;
+  width: 100%;
+  min-width: 32rem;
   
 }
 
@@ -60,14 +61,15 @@ header h1 {
   background: var(--bg-h1);
   color: var(--bg-primary);
   font-weight: 400;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   letter-spacing: 0.05em;
   font-size: 4rem;
   line-height: 3.4rem;
-  padding-left: 9.5rem;
   padding-top: 0.8rem;
   padding-bottom: 0.7rem;
   text-align: center;
+  justify-content: center;
+  width: 100%;
   
 
   
@@ -80,31 +82,45 @@ header h1 {
 
 main {
   background: #FFFFFF;
+  display: grid;
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
-main p {
+main .card:nth-child(odd) img {
+  height: 250px;
+}
+
+main .card:nth-child(even) img {
+  height: 450px;
+}
+
+.text p {
   font-family: var(--ff-texting);
   color: var(--fc-secondary);
-  width: 38.4rem;
+  width: 100%;
   font-weight:400;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   text-align: center;
   line-height: 1.5rem;
-  padding: 1.4rem 4.3rem 4.0rem 3.6rem;
+  padding: 20px;
+  background: var(--fc-primary);
+
 
 }
 
 .card {
   position: relative;
   font-family: var(--ff-heading);
+  padding: 0 10px;
+  width: 100%;
 }
 
 .card img {
   object-fit: cover;
-  padding-bottom: 2.0rem;
-  padding-left: 3.2rem;
+
   border-radius: 2.0rem;
   transition: all 200ms;
   animation-name: downtop;
@@ -128,7 +144,6 @@ main p {
   padding-right: 2.3rem;
   padding-left: 2.4rem;
   top: 1.6rem;
-  left: 19.2rem;
   right: 1.6rem;
   animation-name: topdown;
   animation-duration: 1200ms;
